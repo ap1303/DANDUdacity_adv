@@ -126,6 +126,16 @@ class UnicodeDictWriter(csv.DictWriter, object):
             self.writerow(row)
 
 
+def update(string, mapping):
+    words = string.split()
+    for w in range(len(words)):
+        if words[w] in mapping:
+            words[w] = mapping[words[w]]
+    name = " ".join(words)
+    return name
+
+
+
 # ================================================== #
 #               Main Function                        #
 # ================================================== #

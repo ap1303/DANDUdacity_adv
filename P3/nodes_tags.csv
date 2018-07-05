@@ -1267,7 +1267,7 @@ id,key,value,type
 157645149,ele,6,regular
 157645149,Class,Populated Place,gnis
 157645149,County,Camden,gnis
-157645149,County_num,007,gnis
+157645149,County_num,7,gnis
 157645149,ST_alpha,NJ,gnis
 157645149,ST_num,34,gnis
 157645149,id,881810,gnis
@@ -1391,7 +1391,7 @@ id,key,value,type
 158518631,ele,6,regular
 158518631,Class,Populated Place,gnis
 158518631,County,Camden,gnis
-158518631,County_num,007,gnis
+158518631,County_num,7,gnis
 158518631,ST_alpha,NJ,gnis
 158518631,ST_num,34,gnis
 158518631,id,875105,gnis
@@ -1554,7 +1554,7 @@ id,key,value,type
 274216909,created_by,Potlatch 0.9c,regular
 274216909,cuisine,southwestern,regular
 274216909,name,Chili's,regular
-274216963,name,7-11,regular
+274216963,name,11-Jul,regular
 274216963,shop,convenience,regular
 274217382,city,Philadelphia,addr
 274217382,housenumber,3401,addr
@@ -1622,7 +1622,7 @@ id,key,value,type
 329123563,name,Wiggins Park Marina,regular
 329181144,city,Camden,addr
 329181144,housenumber,401,addr
-329181144,postcode,08102,addr
+329181144,postcode,8102,addr
 329181144,state,NJ,addr
 329181144,street,Market Street,addr
 329181144,amenity,post_office,regular
@@ -1671,7 +1671,7 @@ id,key,value,type
 343293151,postcode,19104,addr
 343293151,state,PA,addr
 343293151,amenity,cinema,regular
-343293151,phone,+1-215-386-3300,contact
+343293151,phone,-3900,contact
 343293151,name,Rave Cinema,regular
 343293716,city,Philadelphia,addr
 343293716,housenumber,428,addr
@@ -2228,7 +2228,7 @@ id,key,value,type
 357374314,healthcare,hospital,regular
 357374314,speciality,ophthalmology,healthcare
 357374314,name,Wills Eye Hospital,regular
-357374314,opening_hours,24/7,regular
+357374314,opening_hours,24-Jul,regular
 357374314,phone,+1 215 928 3000,regular
 357374314,website,https://www.willseye.org/,regular
 357374314,wikidata,Q8022473,regular
@@ -2243,14 +2243,14 @@ id,key,value,type
 357374384,name,Southwark Post Office,regular
 357718543,amenity,school,regular
 357718543,ele,6,regular
-357718543,county_id,007,gnis
+357718543,county_id,7,gnis
 357718543,created,09/08/1979,gnis
 357718543,feature_id,874684,gnis
 357718543,state_id,34,gnis
 357718543,name,Bergen Square School,regular
 357724572,amenity,school,regular
 357724572,ele,5,regular
-357724572,county_id,007,gnis
+357724572,county_id,7,gnis
 357724572,created,09/08/1979,gnis
 357724572,edited,01/22/2008,gnis
 357724572,feature_id,877669,gnis
@@ -2258,7 +2258,7 @@ id,key,value,type
 357724572,name,Lanning Square Elementary School,regular
 357727716,amenity,school,regular
 357727716,ele,6,regular
-357727716,county_id,007,gnis
+357727716,county_id,7,gnis
 357727716,created,09/08/1979,gnis
 357727716,edited,01/22/2008,gnis
 357727716,feature_id,879557,gnis
@@ -2266,21 +2266,21 @@ id,key,value,type
 357727716,name,Pyne Poynt Middle School,regular
 357729040,amenity,school,regular
 357729040,ele,6,regular
-357729040,county_id,007,gnis
+357729040,county_id,7,gnis
 357729040,created,09/08/1979,gnis
 357729040,feature_id,880119,gnis
 357729040,state_id,34,gnis
 357729040,name,Saint Marys School,regular
 357729420,amenity,school,regular
 357729420,ele,6,regular
-357729420,county_id,007,gnis
+357729420,county_id,7,gnis
 357729420,created,09/08/1979,gnis
 357729420,feature_id,880231,gnis
 357729420,state_id,34,gnis
 357729420,name,Saints Peter and Paul School,regular
 357730622,amenity,school,regular
 357730622,ele,4,regular
-357730622,county_id,007,gnis
+357730622,county_id,7,gnis
 357730622,created,09/08/1979,gnis
 357730622,edited,01/22/2008,gnis
 357730622,feature_id,880996,gnis
@@ -2288,14 +2288,14 @@ id,key,value,type
 357730622,old_name,Sumner Elementary School,regular
 357731873,amenity,school,regular
 357731873,ele,6,regular
-357731873,county_id,007,gnis
+357731873,county_id,7,gnis
 357731873,created,09/08/1979,gnis
 357731873,edited,01/22/2008,gnis
 357731873,feature_id,881813,gnis
 357731873,state_id,34,gnis
 357731873,name,J G Whittier Elementary School,regular
 357735934,ele,0,regular
-357735934,county_id,007,gnis
+357735934,county_id,7,gnis
 357735934,created,08/01/1994,gnis
 357735934,feature_id,885018,gnis
 357735934,state_id,34,gnis
@@ -2303,42 +2303,42 @@ id,key,value,type
 357735934,name,WSSJ-AM (Camden),regular
 357748553,amenity,school,regular
 357748553,ele,4,regular
-357748553,county_id,007,gnis
+357748553,county_id,7,gnis
 357748553,created,08/23/2007,gnis
 357748553,feature_id,2340300,gnis
 357748553,state_id,34,gnis
 357748553,name,Fetters Alternative High School,regular
 357748641,amenity,school,regular
 357748641,ele,5,regular
-357748641,county_id,007,gnis
+357748641,county_id,7,gnis
 357748641,created,08/23/2007,gnis
 357748641,feature_id,2340368,gnis
 357748641,state_id,34,gnis
 357748641,name,Mickle Elementary School,regular
 357749059,amenity,school,regular
 357749059,ele,6,regular
-357749059,county_id,007,gnis
+357749059,county_id,7,gnis
 357749059,created,01/22/2008,gnis
 357749059,feature_id,2372242,gnis
 357749059,state_id,34,gnis
 357749059,name,South Camden Alternative Middle School,regular
 357749162,amenity,school,regular
 357749162,ele,6,regular
-357749162,county_id,007,gnis
+357749162,county_id,7,gnis
 357749162,created,01/22/2008,gnis
 357749162,feature_id,2372337,gnis
 357749162,state_id,34,gnis
 357749162,old_name,U S Wiggins Elementary School,regular
 357749204,amenity,school,regular
 357749204,ele,6,regular
-357749204,county_id,007,gnis
+357749204,county_id,7,gnis
 357749204,created,01/22/2008,gnis
 357749204,feature_id,2372377,gnis
 357749204,state_id,34,gnis
 357749204,name,Hope Community Charter School,regular
 357749204,old_name,The San Miguel School,regular
 357749285,ele,6,regular
-357749285,county_id,007,gnis
+357749285,county_id,7,gnis
 357749285,created,01/22/2008,gnis
 357749285,feature_id,2372450,gnis
 357749285,state_id,34,gnis
@@ -2346,55 +2346,55 @@ id,key,value,type
 357749285,name,William F Powell Elementary School,regular
 357749309,amenity,school,regular
 357749309,ele,5,regular
-357749309,county_id,007,gnis
+357749309,county_id,7,gnis
 357749309,created,01/22/2008,gnis
 357749309,feature_id,2372471,gnis
 357749309,state_id,34,gnis
 357749309,name,Creative Arts High School,regular
 357749648,amenity,school,regular
 357749648,ele,6,regular
-357749648,county_id,007,gnis
+357749648,county_id,7,gnis
 357749648,created,01/22/2008,gnis
 357749648,feature_id,2372718,gnis
 357749648,state_id,34,gnis
 357749648,name,Environment Community Opportunity Charter School,regular
 357749652,amenity,school,regular
 357749652,ele,6,regular
-357749652,county_id,007,gnis
+357749652,county_id,7,gnis
 357749652,created,01/22/2008,gnis
 357749652,feature_id,2372720,gnis
 357749652,state_id,34,gnis
 357749652,name,Distinctions in Urban Education Season Charter School,regular
 357749697,ele,6,regular
-357749697,county_id,007,gnis
+357749697,county_id,7,gnis
 357749697,created,01/22/2008,gnis
 357749697,feature_id,2372746,gnis
 357749697,state_id,34,gnis
 357749697,old_name,Mount Olivet Seventh Day Adventist School,regular
 357749699,amenity,school,regular
 357749699,ele,6,regular
-357749699,county_id,007,gnis
+357749699,county_id,7,gnis
 357749699,created,01/22/2008,gnis
 357749699,feature_id,2372748,gnis
 357749699,state_id,34,gnis
 357749699,old_name,Sacred Heart Grade School,regular
 357750494,amenity,school,regular
 357750494,ele,6,regular
-357750494,county_id,007,gnis
+357750494,county_id,7,gnis
 357750494,created,01/22/2008,gnis
 357750494,feature_id,2373385,gnis
 357750494,state_id,34,gnis
 357750494,name,Lanning Elementary School Annex,regular
 357750499,amenity,school,regular
 357750499,ele,6,regular
-357750499,county_id,007,gnis
+357750499,county_id,7,gnis
 357750499,created,01/22/2008,gnis
 357750499,feature_id,2373389,gnis
 357750499,state_id,34,gnis
 357750499,name,Holy Name School,regular
 357750744,amenity,school,regular
 357750744,ele,6,regular
-357750744,county_id,007,gnis
+357750744,county_id,7,gnis
 357750744,created,01/22/2008,gnis
 357750744,feature_id,2373559,gnis
 357750744,state_id,34,gnis
@@ -2514,7 +2514,7 @@ id,key,value,type
 361009247,amenity,cafe,regular
 361009247,name,Au Bon Pain,regular
 361009251,name,Wawa,regular
-361009251,opening_hours,24/7,regular
+361009251,opening_hours,24-Jul,regular
 361009251,shop,convenience,regular
 361011451,amenity,bank,regular
 361011451,name,Citizens Bank,regular
@@ -6061,7 +6061,7 @@ id,key,value,type
 1847081953,name,Rybread,regular
 1847081969,name,The Fairmount Water Works Interpretive Center,regular
 1847081969,tourism,museum,regular
-1847081973,housenumber,640 ,addr
+1847081973,housenumber,640,addr
 1847081973,postcode,19130,addr
 1847081973,street,Waterworks Drive ,addr
 1847081973,amenity,restaurant,regular
@@ -6310,12 +6310,12 @@ id,key,value,type
 2012656014,amenity,restaurant,regular
 2012656014,cuisine,chinese,regular
 2012656014,name,China Express,regular
-2012656015,housename,7/11,addr
+2012656015,housename,11-Jul,addr
 2012656015,housenumber,1501,addr
 2012656015,street,Cecil B. Moore Avenue ,addr
 2012656015,amenity,restaurant,regular
-2012656015,name,7/11,regular
-2012656016,housenumber,1521 ,addr
+2012656015,name,11-Jul,regular
+2012656016,housenumber,1521,addr
 2012656016,street,Cecil B. Moore,addr
 2012656016,amenity,restaurant,regular
 2012656016,cuisine,chinese,regular
@@ -6335,7 +6335,7 @@ id,key,value,type
 2014886333,amenity,pub,regular
 2014886333,designation,Club/Pub,regular
 2014886333,name,The Well,regular
-2014886336,housenumber,1214 ,addr
+2014886336,housenumber,1214,addr
 2014886336,postcode,19130,addr
 2014886336,street,North Broad St,addr
 2014886336,amenity,school,regular
@@ -6658,7 +6658,7 @@ id,key,value,type
 2100740217,cuisine,pizza,regular
 2100740217,name,Allegro Pizza,regular
 2100740217,opening_hours,Su-Th 11:00-24:00;Fr-Sa 11:00-03:00,regular
-2100740217,phone,+1-215-382-8158,regular
+2100740217,phone,-8754,regular
 2100740217,website,http://www.allegropizza.com,regular
 2100740219,name,The Last Word Bookshop,regular
 2100740219,shop,books,regular
@@ -7262,7 +7262,7 @@ id,key,value,type
 2256040033,street,Walnut Street,addr
 2256040033,amenity,restaurant,regular
 2256040033,name,The Fat Ham,regular
-2256040033,phone,+12157351914,regular
+2256040033,phone,12157351914,regular
 2256040033,website,http://www.sbragadining.com/fatham/,regular
 2256040035,amenity,restaurant,regular
 2256040035,cuisine,italian,regular
@@ -7377,7 +7377,7 @@ id,key,value,type
 2267258445,street,Walnut Street,addr
 2267258445,amenity,bank,regular
 2267258445,name,Susquehanna Bank,regular
-2267258446,name,7-11,regular
+2267258446,name,11-Jul,regular
 2267258446,shop,convenience,regular
 2268351148,name,Kenneth Cole,regular
 2268351148,shop,clothes,regular
@@ -7517,7 +7517,7 @@ id,key,value,type
 2390519811,shop,convenience,regular
 2390519812,amenity,cafe,regular
 2390519812,name,Philadelphia Java Co.,regular
-2390519813,name,7-11,regular
+2390519813,name,11-Jul,regular
 2390519813,shop,convenience,regular
 2430677937,highway,traffic_signals,regular
 2443527831,amenity,post_box,regular
@@ -7631,7 +7631,7 @@ id,key,value,type
 2551317576,street,Washington Avenue,addr
 2551317576,name,Pirate Printing Company,regular
 2551317576,note,email us at info@pirateprintingcompany.com,regular
-2551317576,opening_hours,24/7,regular
+2551317576,opening_hours,24-Jul,regular
 2551317576,bitcoin,yes,payment
 2551317576,shop,t-shirts,regular
 2551317576,website,http://pirateprintingcompany.com,regular
@@ -9229,7 +9229,7 @@ id,key,value,type
 2611799802,amenity,restaurant,regular
 2611799802,cuisine,Irish_American_pub,regular
 2611799802,name,St. Declan's Well,regular
-2611799802,phone,+12158830965,regular
+2611799802,phone,12158830965,regular
 2611799802,website,http://www.stdeclanswell.com/,regular
 2613465619,city,Philadelphia,addr
 2613465619,housenumber,149,addr
@@ -9903,7 +9903,7 @@ id,key,value,type
 2700416545,cuisine,pizza,regular
 2700416545,delivery,yes,regular
 2700416545,name,The Axis Pizza,regular
-2700416545,opening_hours,24/7,regular
+2700416545,opening_hours,24-Jul,regular
 2700416545,phone,215-382-2199,regular
 2700416545,takeaway,yes,regular
 2700416545,website,http://www.axispizza.com/,regular
@@ -12463,26 +12463,26 @@ id,key,value,type
 3376088123,amenity,bicycle_repair_station,regular
 3376088123,brand,Dero,regular
 3376088123,note,University of Pennsylvania,regular
-3376088123,opening_hours,24/7,regular
+3376088123,opening_hours,24-Jul,regular
 3376088123,bicycle:chain_tool,no,service
 3376088123,source,osmsync:dero,regular
 3376088124,amenity,bicycle_repair_station,regular
 3376088124,brand,Dero,regular
 3376088124,note,Penn University,regular
-3376088124,opening_hours,24/7,regular
+3376088124,opening_hours,24-Jul,regular
 3376088124,bicycle:chain_tool,no,service
 3376088124,bicycle:pump,yes,service
 3376088124,source,osmsync:dero,regular
 3376088125,amenity,bicycle_repair_station,regular
 3376088125,brand,Dero,regular
 3376088125,note,University of Pennsylvania,regular
-3376088125,opening_hours,24/7,regular
+3376088125,opening_hours,24-Jul,regular
 3376088125,bicycle:chain_tool,no,service
 3376088125,source,osmsync:dero,regular
 3376088126,amenity,bicycle_repair_station,regular
 3376088126,brand,Dero,regular
 3376088126,note,Penn University,regular
-3376088126,opening_hours,24/7,regular
+3376088126,opening_hours,24-Jul,regular
 3376088126,bicycle:chain_tool,no,service
 3376088126,source,osmsync:dero,regular
 3394720636,name,Tops Dry Cleaning,regular
@@ -16874,7 +16874,7 @@ id,key,value,type
 3632353779,amenity,cafe,regular
 3632353779,cuisine,donut,regular
 3632353779,name,Dunkin' Donuts,regular
-3632353779,opening_hours,24/7,regular
+3632353779,opening_hours,24-Jul,regular
 3632353779,phone,215-596-0364,regular
 3632353779,source,"Survey, website",regular
 3632353779,website,http://www.dunkindonuts.com/content/dunkindonuts/en/stores.html?a=19104,regular
@@ -17014,7 +17014,7 @@ id,key,value,type
 3669130626,name,Dunkin' Donuts,regular
 3669130627,city,Camden,addr
 3669130627,housenumber,12,addr
-3669130627,postcode,08103,addr
+3669130627,postcode,8103,addr
 3669130627,state,NJ,addr
 3669130627,street,Broadway,addr
 3669130627,name,Cricket Wireless,regular
@@ -17041,7 +17041,7 @@ id,key,value,type
 3669223226,name,Cafe and Salad Works,regular
 3669226982,city,Camden,addr
 3669226982,housenumber,701,addr
-3669226982,postcode,08102,addr
+3669226982,postcode,8102,addr
 3669226982,state,NJ,addr
 3669226982,street,North 7th Street,addr
 3669226982,name,B&B Grocery,regular
@@ -17060,7 +17060,7 @@ id,key,value,type
 3669245470,name,Bridge Cafe,regular
 3669248280,city,Camden,addr
 3669248280,housenumber,638,addr
-3669248280,postcode,08102,addr
+3669248280,postcode,8102,addr
 3669248280,state,NJ,addr
 3669248280,street,North 7th Street,addr
 3669248280,amenity,fast_food,regular
@@ -17068,7 +17068,7 @@ id,key,value,type
 3669248280,name,Golden Dragon,regular
 3669249150,city,Camden,addr
 3669249150,housenumber,837,addr
-3669249150,postcode,08102,addr
+3669249150,postcode,8102,addr
 3669249150,state,NJ,addr
 3669249150,street,North 8th Street,addr
 3669249150,amenity,restaurant,regular
@@ -17078,7 +17078,7 @@ id,key,value,type
 3669250660,name,Rutgers Dining Hall,regular
 3669256637,city,Camden,addr
 3669256637,housenumber,1,addr
-3669256637,postcode,08102,addr
+3669256637,postcode,8102,addr
 3669256637,state,NJ,addr
 3669256637,street,Market Street,addr
 3669256637,amenity,fast_food,regular
@@ -17123,28 +17123,28 @@ id,key,value,type
 3669531209,noexit,yes,regular
 3670701017,city,Camden,addr
 3670701017,housenumber,1100,addr
-3670701017,postcode,08103,addr
+3670701017,postcode,8103,addr
 3670701017,state,NJ,addr
 3670701017,street,Broadway,addr
 3670701017,name,Duran Grocery,regular
 3670701017,shop,convenience,regular
 3670704816,city,Camden,addr
 3670704816,housenumber,1012,addr
-3670704816,postcode,08103,addr
+3670704816,postcode,8103,addr
 3670704816,state,NJ,addr
 3670704816,street,Broadway,addr
 3670704816,name,Crystal Cleaners,regular
 3670704816,shop,dry_cleaning,regular
 3670704817,city,Camden,addr
 3670704817,housenumber,1016,addr
-3670704817,postcode,08103,addr
+3670704817,postcode,8103,addr
 3670704817,state,NJ,addr
 3670704817,street,Broadway,addr
 3670704817,name,F.R. Grocery,regular
 3670704817,shop,convenience,regular
 3670711519,city,Camden,addr
 3670711519,housenumber,1106,addr
-3670711519,postcode,08103,addr
+3670711519,postcode,8103,addr
 3670711519,state,NJ,addr
 3670711519,street,Broadway,addr
 3670711519,amenity,gym,regular
@@ -17153,14 +17153,14 @@ id,key,value,type
 3670711519,website,https://www.facebook.com/pages/Broadway-Fitness/116141645076742,regular
 3670714536,city,Camden,addr
 3670714536,housenumber,1120,addr
-3670714536,postcode,08103,addr
+3670714536,postcode,8103,addr
 3670714536,state,NJ,addr
 3670714536,street,Broadway,addr
 3670714536,craft,shoemaker,regular
 3670714536,name,Gold Star Shoe Repairing,regular
 3670738437,city,Camden,addr
 3670738437,housenumber,1200,addr
-3670738437,postcode,08103,addr
+3670738437,postcode,8103,addr
 3670738437,state,NJ,addr
 3670738437,street,Broadway,addr
 3670738437,name,Triangle Liquor Store,regular
@@ -17171,7 +17171,7 @@ id,key,value,type
 3670738441,shop,hairdresser,regular
 3670775778,city,Camden,addr
 3670775778,housenumber,1462,addr
-3670775778,postcode,08104,addr
+3670775778,postcode,8104,addr
 3670775778,state,NJ,addr
 3670775778,street,Broadway,addr
 3670775778,name,David's Tire and Auto Repair,regular
@@ -17488,7 +17488,7 @@ id,key,value,type
 3680620758,shop,convenience,regular
 3680628145,city,Camden,addr
 3680628145,housenumber,789,addr
-3680628145,postcode,08103,addr
+3680628145,postcode,8103,addr
 3680628145,state,NJ,addr
 3680628145,street,Chestnut Street,addr
 3680628145,amenity,bar,regular
@@ -17559,7 +17559,7 @@ id,key,value,type
 3690536998,man_made,crane,regular
 3690774406,city,Camden,addr
 3690774406,housenumber,720,addr
-3690774406,postcode,08104,addr
+3690774406,postcode,8104,addr
 3690774406,state,NJ,addr
 3690774406,street,Ferry Avenue,addr
 3690774406,name,Leyba Grocery Store,regular
@@ -17582,42 +17582,42 @@ id,key,value,type
 3691774726,supervised,yes,regular
 3691922805,city,Camden,addr
 3691922805,housenumber,439,addr
-3691922805,postcode,08102,addr
+3691922805,postcode,8102,addr
 3691922805,state,NJ,addr
 3691922805,street,State Street,addr
 3691922805,name,F&S Food Market,regular
 3691922805,shop,convenience,regular
 3691932024,city,Camden,addr
 3691932024,housenumber,801,addr
-3691932024,postcode,08102,addr
+3691932024,postcode,8102,addr
 3691932024,state,NJ,addr
 3691932024,street,State Street,addr
 3691932024,name,Rodriguez Discount,regular
 3691932024,shop,variety_store,regular
 3692035201,city,Camden,addr
 3692035201,housenumber,601,addr
-3692035201,postcode,08102,addr
+3692035201,postcode,8102,addr
 3692035201,state,NJ,addr
 3692035201,street,North 5th Street,addr
 3692035201,name,Nueva Era Grocery,regular
 3692035201,shop,convenience,regular
 3692043148,city,Camden,addr
 3692043148,housenumber,601,addr
-3692043148,postcode,08102,addr
+3692043148,postcode,8102,addr
 3692043148,state,NJ,addr
 3692043148,street,North Front Street,addr
 3692043148,name,Agramonte Grocery,regular
 3692043148,shop,convenience,regular
 3692063870,city,Camden,addr
 3692063870,housenumber,636,addr
-3692063870,postcode,08102,addr
+3692063870,postcode,8102,addr
 3692063870,state,NJ,addr
 3692063870,street,North 4th Street,addr
 3692063870,name,Perez Grocery,regular
 3692063870,shop,convenience,regular
 3692111551,city,Camden,addr
 3692111551,housenumber,639,addr
-3692111551,postcode,08102,addr
+3692111551,postcode,8102,addr
 3692111551,state,NJ,addr
 3692111551,street,North 6th Street,addr
 3692111551,name,Los Compadres Grocery Store,regular
@@ -17626,35 +17626,35 @@ id,key,value,type
 3692122532,shop,hairdresser,regular
 3692127120,city,Camden,addr
 3692127120,housenumber,701,addr
-3692127120,postcode,08102,addr
+3692127120,postcode,8102,addr
 3692127120,state,NJ,addr
 3692127120,street,North 9th Street,addr
 3692127120,amenity,fast_food,regular
 3692127120,name,Munchy Time,regular
 3692127121,city,Camden,addr
 3692127121,housenumber,644,addr
-3692127121,postcode,08102,addr
+3692127121,postcode,8102,addr
 3692127121,state,NJ,addr
 3692127121,street,North 9th Street,addr
 3692127121,name,William Grocery,regular
 3692127121,shop,convenience,regular
 3692144300,city,Camden,addr
 3692144300,housenumber,839,addr
-3692144300,postcode,08102,addr
+3692144300,postcode,8102,addr
 3692144300,state,NJ,addr
 3692144300,street,North 4th Street,addr
 3692144300,name,4th & York Mini Market,regular
 3692144300,shop,convenience,regular
 3692144301,city,Camden,addr
 3692144301,housenumber,900,addr
-3692144301,postcode,08102,addr
+3692144301,postcode,8102,addr
 3692144301,state,NJ,addr
 3692144301,street,North 4th Street,addr
 3692144301,name,Bernard Grocery Store,regular
 3692144301,shop,convenience,regular
 3692175078,city,Camden,addr
 3692175078,housenumber,937,addr
-3692175078,postcode,08102,addr
+3692175078,postcode,8102,addr
 3692175078,state,NJ,addr
 3692175078,street,North 4th Street,addr
 3692175078,name,Exclusive Cuts,regular
@@ -18455,7 +18455,7 @@ id,key,value,type
 4217560327,amenity,bicycle_repair_station,regular
 4217560327,brand,Dero,regular
 4217560327,note,Bok Building,regular
-4217560327,opening_hours,24/7,regular
+4217560327,opening_hours,24-Jul,regular
 4217560327,bicycle:pump,yes,service
 4223662326,housenumber,107,addr
 4236656389,amenity,restaurant,regular
@@ -18624,7 +18624,7 @@ id,key,value,type
 4449870352,street,South 33rd Street,addr
 4449870352,fax,267-804-7189,regular
 4449870352,name,Back2New Tire Shop,regular
-4449870352,opening_hours,24/7,regular
+4449870352,opening_hours,24-Jul,regular
 4449870352,phone,267-804-7187,regular
 4449870352,shop,tyres,regular
 4472642792,city,Philadelphia,addr
@@ -18634,7 +18634,7 @@ id,key,value,type
 4472642792,street,Pine Street,addr
 4472642792,name,Formerly Taws,regular
 4472642792,owner,Dov Leis,regular
-4472642792,phone,+1-215-545-5380,regular
+4472642792,phone,-6139,regular
 4472642792,website,http://formerlytaws.com,regular
 4476046481,amenity,bank,regular
 4476046481,name,Citizens Bank,regular
@@ -19219,7 +19219,7 @@ id,key,value,type
 4539421698,leisure,sports_centre,regular
 4539421698,level,4,regular
 4539421698,name,Dhyana Yoga,regular
-4539421698,phone,+1-215-222-9642,regular
+4539421698,phone,-10078,regular
 4539421698,sport,yoga,regular
 4539421698,website,http://dhyana-yoga.com,regular
 4540208847,amenity,community_centre,regular
@@ -19295,7 +19295,7 @@ id,key,value,type
 4563068267,state,PA,addr
 4563068267,street,Race Street 2nd Floor,addr
 4563068267,name,Law Offices Of Eugene P Tinari,regular
-4563068267,phone,+1-215-569-2551,regular
+4563068267,phone,-3334,regular
 4563068267,website,http://etinarilaw.com,regular
 4564414010,housenumber,131,addr
 4564414010,postcode,19107,addr
@@ -19308,7 +19308,7 @@ id,key,value,type
 4564414010,website,http://www.spicecnoodle.com/,regular
 4564653733,city,Camden,addr
 4564653733,housenumber,821,addr
-4564653733,postcode,08103,addr
+4564653733,postcode,8103,addr
 4564653733,state,NJ,addr
 4564653733,street,South 4th Street,addr
 4564653733,amenity,restaurant,regular
@@ -19368,11 +19368,11 @@ id,key,value,type
 4643596137,postcode,19102,addr
 4643596137,state,PA,addr
 4643596137,street,Locust Street,addr
-4643596137,fax,+1-215-545-4617,regular
+4643596137,fax,-5376,regular
 4643596137,level,9,regular
 4643596137,name,"Jeffrey S. Lichtman, LLC",regular
 4643596137,office,lawyer,regular
-4643596137,phone,+1-215-731-1150,regular
+4643596137,phone,-2095,regular
 4643596137,website,http://www.socialsecuritydisabilityclaim.net,regular
 4646669803,city,Philadelphia,addr
 4646669803,housenumber,1250,addr
@@ -19384,7 +19384,7 @@ id,key,value,type
 4646669803,website,http://www.kungfunecktie.com,regular
 4646761597,city,Camden,addr
 4646761597,housenumber,114,addr
-4646761597,postcode,08102,addr
+4646761597,postcode,8102,addr
 4646761597,state,NJ,addr
 4646761597,street,N 3rd St,addr
 4646761597,category,Salad Shop,regular
@@ -19393,7 +19393,7 @@ id,key,value,type
 4646761597,website,http://freshfruitsandsalads.com,regular
 4649150190,city,Camden,addr
 4649150190,housenumber,1,addr
-4649150190,postcode,08102,addr
+4649150190,postcode,8102,addr
 4649150190,state,NJ,addr
 4649150190,street,Market Street,addr
 4649150190,amenity,bar,regular
@@ -19411,7 +19411,7 @@ id,key,value,type
 4668627526,name,South Philly Bar and Grill,regular
 4668627527,amenity,fast_food,regular
 4668627527,name,Pat's King of Steaks,regular
-4668627527,opening_hours,24/7,regular
+4668627527,opening_hours,24-Jul,regular
 4668627528,city,Philadelphia,addr
 4668627528,postcode,19147,addr
 4668627528,state,PA,addr
@@ -20400,7 +20400,7 @@ id,key,value,type
 4949265921,en,Monk's Cafe,name
 4949265921,es,Monk's Cafe,name
 4949265921,opening_hours,Mo-Su 11:30-02:00,regular
-4949265921,phone,+1215-545-7005,regular
+4949265921,phone,-6335,regular
 4949265921,website,http://monkscafe.com,regular
 4949327723,housenumber,264,addr
 4949327723,postcode,19102,addr
@@ -20590,7 +20590,7 @@ id,key,value,type
 5159389368,description,"Widely recognized as one of the preeminent criminal defense attorneys in the nation, for more than a decade, Philadelphia Attorney Evan Hughes has fought for his clients’ rights and freedoms in both criminal and civil court.",regular
 5159389368,name,The Hughes Firm,regular
 5159389368,office,lawyer,regular
-5159389368,opening_hours,24/7,regular
+5159389368,opening_hours,24-Jul,regular
 5159389368,phone,(215) 454-6680,regular
 5159389368,website,https://www.philadelphiacriminallawyers.pro/,regular
 5172104653,amenity,restaurant,regular
@@ -20880,7 +20880,7 @@ id,key,value,type
 5290946107,american_express,yes,payment
 5290946107,mastercard,yes,payment
 5290946107,visa,yes,payment
-5290946107,phone,+1-215-336-3557,regular
+5290946107,phone,-4107,regular
 5290946107,shop,florist,regular
 5290946107,website,http://tenpenniesfloral.com/,regular
 5299747949,highway,traffic_signals,regular
@@ -20943,7 +20943,7 @@ id,key,value,type
 5355456815,amenity,bicycle_repair_station,regular
 5355456815,brand,Dero,regular
 5355456815,note,South 34th and Chestnut,regular
-5355456815,opening_hours,24/7,regular
+5355456815,opening_hours,24-Jul,regular
 5355456815,bicycle:pump,yes,service
 5355456815,bicycle:tools,yes,service
 5358059677,name,30th Street,regular
@@ -21211,8 +21211,8 @@ id,key,value,type
 5394160041,description,"Bay Management Group is the premier property management company in Philadelphia, specializing in single family and apartment buildings.",regular
 5394160041,name,Bay Management Group Philadelphia,regular
 5394160041,office,estate_agent,regular
-5394160041,opening_hours,24/7,regular
-5394160041,phone,+1-267-244-7215,regular
+5394160041,opening_hours,24-Jul,regular
+5394160041,phone,-7725,regular
 5394160041,website,https://www.baymgmtgroup.com/philadelphia/,regular
 5398732057,city,Philadelphia,addr
 5398732057,housenumber,990,addr
@@ -21261,7 +21261,7 @@ id,key,value,type
 5425339317,name,Retro Fitness,regular
 5425339317,opening_hours,Mo-Fr 05:00-23:00;Sa-Su 07:00-19:00,regular
 5425339317,operator,Retro Fitness,regular
-5425339317,phone,+1-570-591-1209,regular
+5425339317,phone,-2369,regular
 5425339317,retrofitness,32363,ref
 5425339317,website,http://retrofitness.com/location/philadelphiapaspringgardenst/,regular
 5426889294,amenity,restaurant,regular
@@ -21311,7 +21311,7 @@ id,key,value,type
 5498624657,name,Fellerman & Ciarimboli,regular
 5498624657,office,lawyer,regular
 5498624657,opening_hours,Mo-Fr 08:00-17:00,regular
-5498624657,phone,+1-800-648-7058,regular
+5498624657,phone,-8505,regular
 5498624657,website,https://fellermanlaw.com,regular
 5504220821,amenity,restaurant,regular
 5504220821,name,South Street Diner,regular
@@ -21618,7 +21618,7 @@ id,key,value,type
 5561218268,cash,yes,payment
 5561218268,cheque,yes,payment
 5561218268,credit_cards,yes,payment
-5561218268,phone,+1-215-261-7007,regular
+5561218268,phone,-7482,regular
 5561218268,website,http://www.expertexterminatingphiladelphia.com,regular
 5567269185,housenumber,1845,addr
 5567269185,street,Sampson Street,addr
@@ -21657,7 +21657,7 @@ id,key,value,type
 5574997224,phone,844-522-5787,regular
 5574997224,website,https://munley.com,regular
 5578647654,city,Camden,addr
-5578647654,postcode,08102,addr
+5578647654,postcode,8102,addr
 5578647654,state,NJ,addr
 5578647654,street,North 5th Street,addr
 5578647654,amenity,restaurant,regular
@@ -21718,7 +21718,7 @@ id,key,value,type
 5595440227,name,Vegan Tree,regular
 5595440227,opening_hours,We-Mo 11:00-20:00,regular
 5595440227,outdoor_seating,no,regular
-5595440227,phone,+1-215-454-2898,regular
+5595440227,phone,-3566,regular
 5595440227,smoking,no,regular
 5595440227,takeaway,yes,regular
 5595443764,city,Philadelphia,addr
@@ -21996,7 +21996,7 @@ id,key,value,type
 5648240927,en,Cinema,name
 5648653084,city,Camden,addr
 5648653084,housenumber,699,addr
-5648653084,postcode,08104,addr
+5648653084,postcode,8104,addr
 5648653084,state,NJ,addr
 5648653084,street,Central Avenue,addr
 5648653084,amenity,bar,regular
@@ -22004,28 +22004,28 @@ id,key,value,type
 5648653085,barrier,gate,regular
 5648653105,city,Camden,addr
 5648653105,housenumber,803,addr
-5648653105,postcode,08104,addr
+5648653105,postcode,8104,addr
 5648653105,state,NJ,addr
 5648653105,street,Carl Miller Boulevard,addr
 5648653105,name,Young's Market,regular
 5648653105,shop,convenience,regular
 5648653106,city,Camden,addr
 5648653106,housenumber,1714,addr
-5648653106,postcode,08104,addr
+5648653106,postcode,8104,addr
 5648653106,state,NJ,addr
 5648653106,street,South 10th Street,addr
 5648653106,name,Gomez Mini Market,regular
 5648653106,shop,convenience,regular
 5648653112,city,Camden,addr
 5648653112,housenumber,1020,addr
-5648653112,postcode,08104,addr
+5648653112,postcode,8104,addr
 5648653112,state,NJ,addr
 5648653112,street,Carl Miller Boulevard,addr
 5648653112,amenity,bar,regular
 5648653112,name,Wildfire's Place,regular
 5648653113,city,Camden,addr
 5648653113,housenumber,1024,addr
-5648653113,postcode,08104,addr
+5648653113,postcode,8104,addr
 5648653113,state,NJ,addr
 5648653113,street,Carl Miller Boulevard,addr
 5648653113,name,The New Village Supermarket,regular
@@ -22034,14 +22034,14 @@ id,key,value,type
 5650297530,shop,convenience,regular
 5650297531,city,Camden,addr
 5650297531,housenumber,87,addr
-5650297531,postcode,08103,addr
+5650297531,postcode,8103,addr
 5650297531,state,NJ,addr
 5650297531,street,Princess Avenue,addr
 5650297531,club,yes,regular
 5650297531,name,Buff Hall,regular
 5650297532,city,Camden,addr
 5650297532,housenumber,1032,addr
-5650297532,postcode,08103,addr
+5650297532,postcode,8103,addr
 5650297532,state,NJ,addr
 5650297532,street,Spruce Street,addr
 5650297532,amenity,place_of_worship,regular
@@ -22054,14 +22054,14 @@ id,key,value,type
 5650437595,shop,convenience,regular
 5650476726,city,Camden,addr
 5650476726,housenumber,1531,addr
-5650476726,postcode,08104,addr
+5650476726,postcode,8104,addr
 5650476726,state,NJ,addr
 5650476726,street,Newport Street,addr
 5650476726,name,Martinez Grocery,regular
 5650476726,shop,convenience,regular
 5650476727,city,Camden,addr
 5650476727,housenumber,1539,addr
-5650476727,postcode,08104,addr
+5650476727,postcode,8104,addr
 5650476727,state,NJ,addr
 5650476727,street,South 10th Street,addr
 5650476727,name,Los Rios Mini Market,regular
@@ -22071,7 +22071,7 @@ id,key,value,type
 5650671677,shop,car_repair,regular
 5650671678,city,Camden,addr
 5650671678,housenumber,1601,addr
-5650671678,postcode,08104,addr
+5650671678,postcode,8104,addr
 5650671678,state,NJ,addr
 5650671678,street,Broadway,addr
 5650671678,name,Delaney's Auto Sales,regular
@@ -22091,21 +22091,21 @@ id,key,value,type
 5652742953,barrier,block,regular
 5652742954,city,Camden,addr
 5652742954,housenumber,1132,addr
-5652742954,postcode,08103,addr
+5652742954,postcode,8103,addr
 5652742954,state,NJ,addr
 5652742954,street,South 3rd Street,addr
 5652742954,name,Aguilera Grocery Store,regular
 5652742954,shop,convenience,regular
 5652742955,city,Camden,addr
 5652742955,housenumber,310,addr
-5652742955,postcode,08103,addr
+5652742955,postcode,8103,addr
 5652742955,state,NJ,addr
 5652742955,street,Kaighns Avenue,addr
 5652742955,name,B&H International Association,regular
 5652742955,shop,car_repair,regular
 5652742956,city,Camden,addr
 5652742956,housenumber,313,addr
-5652742956,postcode,08103,addr
+5652742956,postcode,8103,addr
 5652742956,state,NJ,addr
 5652742956,street,Kaighns Avenue,addr
 5652742956,amenity,place_of_worship,regular
@@ -22113,14 +22113,14 @@ id,key,value,type
 5652742956,religion,christian,regular
 5652742957,city,Camden,addr
 5652742957,housenumber,333,addr
-5652742957,postcode,08103,addr
+5652742957,postcode,8103,addr
 5652742957,state,NJ,addr
 5652742957,street,Kaighns Avenue,addr
 5652742957,name,Center for Family Services,regular
 5652742957,office,association,regular
 5652742958,city,Camden,addr
 5652742958,housenumber,400,addr
-5652742958,postcode,08103,addr
+5652742958,postcode,8103,addr
 5652742958,state,NJ,addr
 5652742958,street,Kaighn Avenue,addr
 5652742958,amenity,place_of_worship,regular
@@ -22131,14 +22131,14 @@ id,key,value,type
 5652742962,religion,christian,regular
 5652742963,city,Camden,addr
 5652742963,housenumber,510,addr
-5652742963,postcode,08103,addr
+5652742963,postcode,8103,addr
 5652742963,state,NJ,addr
 5652742963,street,Liberty Street,addr
 5652742963,healthcare,rehabilitation,regular
 5652742963,name,Volunteers of America Addiction Treatment Program,regular
 5652742964,city,Camden,addr
 5652742964,housenumber,613,addr
-5652742964,postcode,08103,addr
+5652742964,postcode,8103,addr
 5652742964,state,NJ,addr
 5652742964,street,Liberty Street,addr
 5652742964,amenity,place_of_worship,regular
@@ -22146,7 +22146,7 @@ id,key,value,type
 5652742964,religion,christian,regular
 5652742974,city,Camden,addr
 5652742974,housenumber,715,addr
-5652742974,postcode,08103,addr
+5652742974,postcode,8103,addr
 5652742974,state,NJ,addr
 5652742974,street,Kaighn Avenue,addr
 5652742974,amenity,place_of_worship,regular
@@ -22154,7 +22154,7 @@ id,key,value,type
 5652742974,religion,christian,regular
 5652742981,city,Camden,addr
 5652742981,housenumber,753,addr
-5652742981,postcode,08103,addr
+5652742981,postcode,8103,addr
 5652742981,state,NJ,addr
 5652742981,street,Kaighn Avenue,addr
 5652742981,amenity,place_of_worship,regular
@@ -22162,7 +22162,7 @@ id,key,value,type
 5652742981,religion,christian,regular
 5652742982,city,Camden,addr
 5652742982,housenumber,722,addr
-5652742982,postcode,08103,addr
+5652742982,postcode,8103,addr
 5652742982,state,NJ,addr
 5652742982,street,Chestnut Street,addr
 5652742982,amenity,place_of_worship,regular
@@ -22170,35 +22170,35 @@ id,key,value,type
 5652742982,religion,christian,regular
 5652742983,city,Camden,addr
 5652742983,housenumber,700,addr
-5652742983,postcode,08103,addr
+5652742983,postcode,8103,addr
 5652742983,state,NJ,addr
 5652742983,street,Chestnut Street,addr
 5652742983,name,Eddie's Liquor,regular
 5652742983,shop,alcohol,regular
 5652742984,city,Camden,addr
 5652742984,housenumber,1100,addr
-5652742984,postcode,08103,addr
+5652742984,postcode,8103,addr
 5652742984,state,NJ,addr
 5652742984,street,Baring Street,addr
 5652742984,name,Martinez Grocery II,regular
 5652742984,shop,convenience,regular
 5654820605,city,Camden,addr
 5654820605,housenumber,1215,addr
-5654820605,postcode,08103,addr
+5654820605,postcode,8103,addr
 5654820605,state,NJ,addr
 5654820605,street,South 6th Street,addr
 5654820605,man_made,works,regular
 5654820605,name,Arch Custom Manufacturing,regular
 5654820608,city,Camden,addr
 5654820608,housenumber,1101,addr
-5654820608,postcode,08103,addr
+5654820608,postcode,8103,addr
 5654820608,state,NJ,addr
 5654820608,street,Broadway,addr
 5654820608,amenity,childcare,regular
 5654820608,name,Ward Center for Children,regular
 5654820609,city,Camden,addr
 5654820609,housenumber,1112,addr
-5654820609,postcode,08103,addr
+5654820609,postcode,8103,addr
 5654820609,state,NJ,addr
 5654820609,street,Broadway,addr
 5654820609,amenity,place_of_worship,regular
@@ -22206,7 +22206,7 @@ id,key,value,type
 5654820609,religion,christian,regular
 5654820610,city,Camden,addr
 5654820610,housenumber,1114,addr
-5654820610,postcode,08103,addr
+5654820610,postcode,8103,addr
 5654820610,state,NJ,addr
 5654820610,street,Broadway,addr
 5654820610,amenity,place_of_worship,regular
@@ -22214,7 +22214,7 @@ id,key,value,type
 5654820610,religion,christian,regular
 5654820611,city,Camden,addr
 5654820611,housenumber,431,addr
-5654820611,postcode,08103,addr
+5654820611,postcode,8103,addr
 5654820611,state,NJ,addr
 5654820611,street,Kaighn Avenue,addr
 5654820611,amenity,dentist,regular
@@ -22222,7 +22222,7 @@ id,key,value,type
 5654820611,name,Jacob Dental Center,regular
 5654820612,city,Camden,addr
 5654820612,housenumber,427-429,addr
-5654820612,postcode,08103,addr
+5654820612,postcode,8103,addr
 5654820612,state,NJ,addr
 5654820612,street,Kaighn Avenue,addr
 5654820612,amenity,place_of_worship,regular
@@ -22230,14 +22230,14 @@ id,key,value,type
 5654820612,religion,christian,regular
 5654820613,city,Camden,addr
 5654820613,housenumber,1051,addr
-5654820613,postcode,08103,addr
+5654820613,postcode,8103,addr
 5654820613,state,NJ,addr
 5654820613,street,Locust Street,addr
 5654820613,man_made,works,regular
 5654820613,name,Roma Steel Erection,regular
 5654820614,city,Camden,addr
 5654820614,housenumber,1054,addr
-5654820614,postcode,08103,addr
+5654820614,postcode,8103,addr
 5654820614,state,NJ,addr
 5654820614,street,South 2nd Street,addr
 5654820614,man_made,works,regular
@@ -22248,28 +22248,28 @@ id,key,value,type
 5654820620,name,Eastcoast,regular
 5655030843,city,Camden,addr
 5655030843,housenumber,643,addr
-5655030843,postcode,08103,addr
+5655030843,postcode,8103,addr
 5655030843,state,NJ,addr
 5655030843,street,Chestnut Street,addr
 5655030843,amenity,restaurant,regular
 5655030843,name,El Nuevo Areno,regular
 5655030844,city,Camden,addr
 5655030844,housenumber,328,addr
-5655030844,postcode,08103,addr
+5655030844,postcode,8103,addr
 5655030844,state,NJ,addr
 5655030844,street,Cherry Street,addr
 5655030844,amenity,childcare,regular
 5655030844,name,El Shaddai Day Care,regular
 5655030845,city,Camden,addr
 5655030845,housenumber,924,addr
-5655030845,postcode,08103,addr
+5655030845,postcode,8103,addr
 5655030845,state,NJ,addr
 5655030845,street,South 5th Street,addr
 5655030845,club,yes,regular
 5655030845,name,Ye Olde Tymers' Club,regular
 5655030849,city,Camden,addr
 5655030849,housenumber,436,addr
-5655030849,postcode,08103,addr
+5655030849,postcode,8103,addr
 5655030849,state,NJ,addr
 5655030849,street,Spruce Street,addr
 5655030849,amenity,place_of_worship,regular
@@ -22277,7 +22277,7 @@ id,key,value,type
 5655030849,religion,christian,regular
 5655030850,city,Camden,addr
 5655030850,housenumber,434,addr
-5655030850,postcode,08103,addr
+5655030850,postcode,8103,addr
 5655030850,state,NJ,addr
 5655030850,street,Spruce Street,addr
 5655030850,amenity,place_of_worship,regular
@@ -22286,7 +22286,7 @@ id,key,value,type
 5655030850,religion,christian,regular
 5655030851,city,Camden,addr
 5655030851,housenumber,347,addr
-5655030851,postcode,08103,addr
+5655030851,postcode,8103,addr
 5655030851,state,NJ,addr
 5655030851,street,Spruce Street,addr
 5655030851,name,Norma's Grocery Outlet,regular
@@ -22295,7 +22295,7 @@ id,key,value,type
 5655030857,barrier,block,regular
 5655092850,city,Camden,addr
 5655092850,housenumber,604,addr
-5655092850,postcode,08103,addr
+5655092850,postcode,8103,addr
 5655092850,state,NJ,addr
 5655092850,street,Spruce Street,addr
 5655092850,amenity,place_of_worship,regular
@@ -22303,28 +22303,28 @@ id,key,value,type
 5655092850,religion,christian,regular
 5655092851,city,Camden,addr
 5655092851,housenumber,827,addr
-5655092851,postcode,08103,addr
+5655092851,postcode,8103,addr
 5655092851,state,NJ,addr
 5655092851,street,South 9th Street,addr
 5655092851,name,Stelwagon Roofing Supply,regular
 5655092851,shop,hardware,regular
 5655092852,city,Camden,addr
 5655092852,housenumber,777,addr
-5655092852,postcode,08103,addr
+5655092852,postcode,8103,addr
 5655092852,state,NJ,addr
 5655092852,street,Pine Street,addr
 5655092852,name,Zapata Grocery,regular
 5655092852,shop,convenience,regular
 5655092857,city,Camden,addr
 5655092857,housenumber,818,addr
-5655092857,postcode,08103,addr
+5655092857,postcode,8103,addr
 5655092857,state,NJ,addr
 5655092857,street,South 6th Street,addr
 5655092857,name,Eugene's Barber Shop,regular
 5655092857,shop,hairdresser,regular
 5655092860,city,Camden,addr
 5655092860,housenumber,710,addr
-5655092860,postcode,08103,addr
+5655092860,postcode,8103,addr
 5655092860,state,NJ,addr
 5655092860,street,Broadway,addr
 5655092860,name,Richard's Rapid Repairs,regular
@@ -22348,7 +22348,7 @@ id,key,value,type
 5656880068,playground,structure,regular
 5657612789,city,Camden,addr
 5657612789,housenumber,442,addr
-5657612789,postcode,08103,addr
+5657612789,postcode,8103,addr
 5657612789,state,NJ,addr
 5657612789,street,Line Street,addr
 5657612789,amenity,place_of_worship,regular
@@ -22356,42 +22356,42 @@ id,key,value,type
 5657612789,religion,christian,regular
 5657612791,city,Camden,addr
 5657612791,housenumber,713,addr
-5657612791,postcode,08103,addr
+5657612791,postcode,8103,addr
 5657612791,state,NJ,addr
 5657612791,street,Broadway,addr
 5657612791,amenity,community_centre,regular
 5657612791,name,"Charles ""Poppy"" Shapp Community Center",regular
 5657612792,city,Camden,addr
 5657612792,housenumber,721,addr
-5657612792,postcode,08103,addr
+5657612792,postcode,8103,addr
 5657612792,state,NJ,addr
 5657612792,street,Broadway,addr
 5657612792,name,A-1 Uniform City,regular
 5657612792,shop,clothes,regular
 5657612795,city,Camden,addr
 5657612795,housenumber,556,addr
-5657612795,postcode,08103,addr
+5657612795,postcode,8103,addr
 5657612795,state,NJ,addr
 5657612795,street,South 6th Street,addr
 5657612795,name,Rosemary Mini Market,regular
 5657612795,shop,convenience,regular
 5657612796,city,Camden,addr
 5657612796,housenumber,454,addr
-5657612796,postcode,08103,addr
+5657612796,postcode,8103,addr
 5657612796,state,NJ,addr
 5657612796,street,Royden Street,addr
 5657612796,name,Center Food Market,regular
 5657612796,shop,convenience,regular
 5657612797,city,Camden,addr
 5657612797,housenumber,524,addr
-5657612797,postcode,08103,addr
+5657612797,postcode,8103,addr
 5657612797,state,NJ,addr
 5657612797,street,W Street,addr
 5657612797,amenity,bar,regular
 5657612797,name,El Cacique Lounge,regular
 5657612798,city,Camden,addr
 5657612798,housenumber,539,addr
-5657612798,postcode,08103,addr
+5657612798,postcode,8103,addr
 5657612798,state,NJ,addr
 5657612798,street,South 5th Street,addr
 5657612798,name,Albright Auto Detailing,regular
@@ -22400,7 +22400,7 @@ id,key,value,type
 5657612812,traffic_signals,signal,regular
 5657612816,city,Camden,addr
 5657612816,housenumber,315,addr
-5657612816,postcode,08103,addr
+5657612816,postcode,8103,addr
 5657612816,state,NJ,addr
 5657612816,street,South 5th Street,addr
 5657612816,healthcare,rehabilitation,regular
@@ -22409,21 +22409,21 @@ id,key,value,type
 5658950519,name,Camden County Police,regular
 5658950520,city,Camden,addr
 5658950520,housenumber,570,addr
-5658950520,postcode,08103,addr
+5658950520,postcode,8103,addr
 5658950520,state,NJ,addr
 5658950520,street,Benson Street,addr
 5658950520,name,Bride of Christ Robes,regular
 5658950520,shop,clothes,regular
 5658952221,city,Camden,addr
 5658952221,housenumber,400,addr
-5658952221,postcode,08103,addr
+5658952221,postcode,8103,addr
 5658952221,state,NJ,addr
 5658952221,street,Chambers Avenue,addr
 5658952221,healthcare,optometrist,regular
 5658952221,name,Camden Eye Center,regular
 5658952222,city,Camden,addr
 5658952222,housenumber,435,addr
-5658952222,postcode,08103,addr
+5658952222,postcode,8103,addr
 5658952222,state,NJ,addr
 5658952222,street,Chambers Avenue,addr
 5658952222,amenity,place_of_worship,regular
@@ -22431,35 +22431,35 @@ id,key,value,type
 5658952222,religion,christian,regular
 5658952223,city,Camden,addr
 5658952223,housenumber,600,addr
-5658952223,postcode,08103,addr
+5658952223,postcode,8103,addr
 5658952223,state,NJ,addr
 5658952223,street,Berkley Street,addr
 5658952223,name,Cooper Plaza Laundromat,regular
 5658952223,shop,laundry,regular
 5658952224,city,Camden,addr
 5658952224,housenumber,601,addr
-5658952224,postcode,08103,addr
+5658952224,postcode,8103,addr
 5658952224,state,NJ,addr
 5658952224,street,Berkley Street,addr
 5658952224,name,The Butterfly Program,regular
 5658952224,office,association,regular
 5658952225,city,Camden,addr
 5658952225,housenumber,506,addr
-5658952225,postcode,08103,addr
+5658952225,postcode,8103,addr
 5658952225,state,NJ,addr
 5658952225,street,Broadway,addr
 5658952225,healthcare,podiatrist,regular
 5658952225,name,Family Foot Care Center,regular
 5658952226,city,Camden,addr
 5658952226,housenumber,579,addr
-5658952226,postcode,08103,addr
+5658952226,postcode,8103,addr
 5658952226,state,NJ,addr
 5658952226,street,Clinton Street,addr
 5658952226,amenity,childcare,regular
 5658952226,name,Little Minnie's Daycare Center,regular
 5659018893,city,Camden,addr
 5659018893,housenumber,815,addr
-5659018893,postcode,08103,addr
+5659018893,postcode,8103,addr
 5659018893,state,NJ,addr
 5659018893,street,Federal Street,addr
 5659018893,amenity,place_of_worship,regular
@@ -22471,14 +22471,14 @@ id,key,value,type
 5659018909,religion,christian,regular
 5659018910,city,Camden,addr
 5659018910,housenumber,112,addr
-5659018910,postcode,08103,addr
+5659018910,postcode,8103,addr
 5659018910,state,NJ,addr
 5659018910,street,North 7th Street,addr
 5659018910,name,South Jersey AIDS Alliance,regular
 5659018910,office,association,regular
 5659018911,city,Camden,addr
 5659018911,housenumber,700,addr
-5659018911,postcode,08103,addr
+5659018911,postcode,8103,addr
 5659018911,state,NJ,addr
 5659018911,street,Cooper Street,addr
 5659018911,amenity,fuel,regular
@@ -22486,49 +22486,49 @@ id,key,value,type
 5659018911,name,Sunoco,regular
 5659018912,city,Camden,addr
 5659018912,housenumber,120,addr
-5659018912,postcode,08103,addr
+5659018912,postcode,8103,addr
 5659018912,state,NJ,addr
 5659018912,street,North Broadway,addr
 5659018912,amenity,fast_food,regular
 5659018912,name,Crown Fast Food,regular
 5659018913,city,Camden,addr
 5659018913,housenumber,118,addr
-5659018913,postcode,08103,addr
+5659018913,postcode,8103,addr
 5659018913,state,NJ,addr
 5659018913,street,North Broadway,addr
 5659018913,name,Singh Convenience Store,regular
 5659018913,shop,convenience,regular
 5659018914,city,Camden,addr
 5659018914,housenumber,116,addr
-5659018914,postcode,08103,addr
+5659018914,postcode,8103,addr
 5659018914,state,NJ,addr
 5659018914,street,North Broadway,addr
 5659018914,name,Check Cashing Services,regular
 5659018914,shop,convenience,regular
 5659018915,city,Camden,addr
 5659018915,housenumber,114,addr
-5659018915,postcode,08103,addr
+5659018915,postcode,8103,addr
 5659018915,state,NJ,addr
 5659018915,street,North Broadway,addr
 5659018915,name,Dion Gama Hair Braiding,regular
 5659018915,shop,beauty,regular
 5659018916,city,Camden,addr
 5659018916,housenumber,126,addr
-5659018916,postcode,08103,addr
+5659018916,postcode,8103,addr
 5659018916,state,NJ,addr
 5659018916,street,North Broadway,addr
 5659018916,amenity,social_facility,regular
 5659018916,name,Camden Center for Law & Social Justice,regular
 5659018917,city,Camden,addr
 5659018917,housenumber,110,addr
-5659018917,postcode,08103,addr
+5659018917,postcode,8103,addr
 5659018917,state,NJ,addr
 5659018917,street,North Broadway,addr
 5659018917,amenity,bank,regular
 5659018917,name,PNC Bank,regular
 5659018918,city,Camden,addr
 5659018918,housenumber,631,addr
-5659018918,postcode,08103,addr
+5659018918,postcode,8103,addr
 5659018918,state,NJ,addr
 5659018918,street,Market Street,addr
 5659018918,amenity,place_of_worship,regular
@@ -22537,7 +22537,7 @@ id,key,value,type
 5659018918,religion,christian,regular
 5659019021,city,Camden,addr
 5659019021,housenumber,14,addr
-5659019021,postcode,08103,addr
+5659019021,postcode,8103,addr
 5659019021,state,NJ,addr
 5659019021,street,Broadway,addr
 5659019021,amenity,fast_food,regular
@@ -22549,7 +22549,7 @@ id,key,value,type
 5659682156,motor_vehicle,no,regular
 5659717021,city,Camden,addr
 5659717021,housenumber,617,addr
-5659717021,postcode,08102,addr
+5659717021,postcode,8102,addr
 5659717021,state,NJ,addr
 5659717021,street,North 2nd Street,addr
 5659717021,amenity,childcare,regular
@@ -22558,7 +22558,7 @@ id,key,value,type
 5659717023,barrier,block,regular
 5659717024,city,Camden,addr
 5659717024,housenumber,226,addr
-5659717024,postcode,08102,addr
+5659717024,postcode,8102,addr
 5659717024,state,NJ,addr
 5659717024,street,State Street,addr
 5659717024,amenity,bar,regular
@@ -22567,35 +22567,35 @@ id,key,value,type
 5659763714,barrier,block,regular
 5659763715,city,Camden,addr
 5659763715,housenumber,431,addr
-5659763715,postcode,08102,addr
+5659763715,postcode,8102,addr
 5659763715,state,NJ,addr
 5659763715,street,Vine Street,addr
 5659763715,name,CMD All Stars,regular
 5659763715,shop,hairdresser,regular
 5659763717,city,Camden,addr
 5659763717,housenumber,539,addr
-5659763717,postcode,08102,addr
+5659763717,postcode,8102,addr
 5659763717,state,NJ,addr
 5659763717,street,State Street,addr
 5659763717,name,Lutheran Social Ministries of Camden,regular
 5659763717,office,association,regular
 5659763718,city,Camden,addr
 5659763718,housenumber,543,addr
-5659763718,postcode,08102,addr
+5659763718,postcode,8102,addr
 5659763718,state,NJ,addr
 5659763718,street,State Street,addr
 5659763718,name,Hopeworks 'N Camden,regular
 5659763718,office,association,regular
 5659763719,city,Camden,addr
 5659763719,housenumber,532,addr
-5659763719,postcode,08102,addr
+5659763719,postcode,8102,addr
 5659763719,state,NJ,addr
 5659763719,street,State Street,addr
 5659763719,name,"Respond, Inc.",regular
 5659763719,office,association,regular
 5659763720,city,Camden,addr
 5659763720,housenumber,522,addr
-5659763720,postcode,08102,addr
+5659763720,postcode,8102,addr
 5659763720,state,NJ,addr
 5659763720,street,State Street,addr
 5659763720,name,DeSales Service Works,regular
@@ -22607,21 +22607,21 @@ id,key,value,type
 5659764221,shelter,yes,regular
 5659764224,city,Camden,addr
 5659764224,housenumber,433,addr
-5659764224,postcode,08102,addr
+5659764224,postcode,8102,addr
 5659764224,state,NJ,addr
 5659764224,street,North 7th Street,addr
 5659764224,name,Northgate Deli & Grocery,regular
 5659764224,shop,convenience,regular
 5659764225,city,Camden,addr
 5659764225,housenumber,433,addr
-5659764225,postcode,08102,addr
+5659764225,postcode,8102,addr
 5659764225,state,NJ,addr
 5659764225,street,North 7th Street,addr
 5659764225,name,MetroPCS,regular
 5659764225,shop,mobile_phone,regular
 5659764226,city,Camden,addr
 5659764226,housenumber,433,addr
-5659764226,postcode,08102,addr
+5659764226,postcode,8102,addr
 5659764226,state,NJ,addr
 5659764226,street,North 7th Street,addr
 5659764226,amenity,pharmacy,regular
@@ -22630,28 +22630,28 @@ id,key,value,type
 5659764226,name,Northgate Family Pharmacy,regular
 5659764227,city,Camden,addr
 5659764227,housenumber,655,addr
-5659764227,postcode,08102,addr
+5659764227,postcode,8102,addr
 5659764227,state,NJ,addr
 5659764227,street,State Street,addr
 5659764227,name,Plaza 5,regular
 5659764227,shop,hairdresser,regular
 5661396821,city,Camden,addr
 5661396821,housenumber,900,addr
-5661396821,postcode,08102,addr
+5661396821,postcode,8102,addr
 5661396821,state,NJ,addr
 5661396821,street,North 7th Street,addr
 5661396821,name,Marrero Self-Service Laundromat,regular
 5661396821,shop,laundry,regular
 5661396822,city,Camden,addr
 5661396822,housenumber,724,addr
-5661396822,postcode,08102,addr
+5661396822,postcode,8102,addr
 5661396822,state,NJ,addr
 5661396822,street,North 7th Street,addr
 5661396822,amenity,restaurant,regular
 5661396822,name,La Posada Restaurant & Ice Cream Parlor,regular
 5661396831,city,Camden,addr
 5661396831,housenumber,843-45,addr
-5661396831,postcode,08102,addr
+5661396831,postcode,8102,addr
 5661396831,state,NJ,addr
 5661396831,street,Pearl Street,addr
 5661396831,amenity,place_of_worship,regular
@@ -22660,7 +22660,7 @@ id,key,value,type
 5661396832,barrier,block,regular
 5661421922,city,Camden,addr
 5661421922,housenumber,10,addr
-5661421922,postcode,08103,addr
+5661421922,postcode,8103,addr
 5661421922,state,NJ,addr
 5661421922,street,South Delaware Avenue,addr
 5661421922,name,The Parking Authority of the City of Camden,regular
@@ -22696,6 +22696,6 @@ id,key,value,type
 5702007638,cash,yes,payment
 5702007638,mastercard,yes,payment
 5702007638,visa,yes,payment
-5702007638,phone,+1-215-564-5688,regular
+5702007638,phone,-6466,regular
 5702007638,shop,clothes,regular
 5702007638,website,http://dressrighttailor.com,regular
