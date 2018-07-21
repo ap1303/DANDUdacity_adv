@@ -1,70 +1,373 @@
-TITLE by YOUR_NAME_HERE
+Prosper Loan Data Exploration by Peizhi Zhang
 ========================================================
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
-# Load all of the packages that you end up using
-# in your analysis in this code chunk.
+# Load all of the packages that you end up using in your analysis in this code
+# chunk.
 
-# Notice that the parameter "echo" was set to FALSE for this code chunk.
-# This prevents the code from displaying in the knitted HTML output.
-# You should set echo=FALSE for all code chunks in your file.
+# Notice that the parameter "echo" was set to FALSE for this code chunk. This
+# prevents the code from displaying in the knitted HTML output. You should set
+# echo=FALSE for all code chunks in your file, unless it makes sense for your
+# report to show the code that generated a particular plot.
+
+# The other parameters for "message" and "warning" should also be set to FALSE
+# for other code chunks once you have verified that each plot comes out as you
+# want it to. This will clean up the flow of your report.
 
 library(ggplot2)
+library(dplyr)
+library(reshape)
 ```
 
 ```{r echo=FALSE, Load_the_Data}
 # Load the Data
+setwd('/Users/peizhizhang/Desktop/MOOCs/DANDUdacity_advanced/projects/p4')
+data <- read.csv('prosperLoanData.csv')
+```
 
+```{r echo=FALSE, General_Info}
+str(data)
 ```
 
 # Univariate Plots Section
-```{r echo=FALSE, Univariate_Plots}
 
+```{r echo=FALSE, Univariate_Plots}
+by_status <- group_by(data, LoanStatus)
+status.counts <- summarise(by_status, count=n())
+ggplot(status.counts, aes(x=LoanStatus, y=count)) +
+  geom_bar(stat='identity') +
+  coord_flip()
 ```
+
+It seems that there is only a slight proportion of the loans that went past due. However, there are still a considerable proportion of the loans that has defaulted or charged off. This keeps me wondering, is the borrower's status as a home owner a factor in determining the loan status? Or in other words, does the borrower being a home owner improve the chances of loan being paid off? 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, Term_length}
+summary(data$Term)
+by_term <- group_by(data, Term)
+term.count <- summarise(by_term, 
+                        count=n())
+ggplot(term.count, aes(x=Term, y=count)) +
+  geom_bar(stat='identity')
+```
+
+By the Prosper API, we know that possible term values are 36 and 60 months for 3 and 5 years, respectively. So the majority of the loans are for 3 years. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, BorrowerAPR}
+by_APR <- group_by(data, BorrowerAPR)
+APR.count <- summarise(by_APR, 
+                        count=n())
+summary(APR.count$count)
+ggplot(APR.count, aes(x=BorrowerAPR, y=count)) +
+  geom_bar(stat='identity', width=0.01) +
+  coord_cartesian(xlim=c(0, 0.5), ylim=c(0, 4000))
+```
+
+Note that as shown on the graph, the vast majority of borrowerAPR is around 0.36 ~ 0.37, with a pure count of 3672. Amazing! After having skimmed through their webpage and API, I wonder if the borrowerAPR has anything to do with the borrower's state of residence and employment status because those are the factors based on which the borrower rate of interest will be calculated. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, Borrower_state}
+by_state <- group_by(data, BorrowerState)
+state.count <- summarise(by_state, 
+                        count=n())
+state.count <- arrange(state.count, desc(count))
+state.count <- filter(state.count, BorrowerState != "")
+state.count <- head(state.count, 10)
+
+ggplot(state.count, aes(x=BorrowerState, y=count)) +
+  geom_bar(stat='identity') + 
+  coord_flip()
+```
+
+The graph above shows the 10 states that have the largest number of borrowers, with their respective counts of borrowers. Now, it becomes clear that, surprisingly enough, California has the largest number of borrowers. But this finding, weird as it might seem on first sight, does make sense if one gives much thought into the subject matter: California these days has had a surge in commercial activity, especially small IT startups, so it makes sense for those small firms to borrow money. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, Occupation}
+by_job <- group_by(data, Occupation)
+job.count <- summarise(by_job, 
+                        count=n())
+job.count <- arrange(job.count, desc(count))
+job.count <- filter(job.count, Occupation != "")
+job.count <- head(job.count, 11)
+
+ggplot(job.count, aes(x=Occupation, y=count)) +
+  geom_bar(stat='identity') +
+  coord_flip()
+```
+
+Similarly, this plot shows the 10 types of occupation that have the most number of borrowers. Notice that without much of a surprice, the type with a tag of 'Other' has earned the trophy for this one. The type with the second most borrowers is called 'Professional', probably meaning company executives or sales reps.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, EstimatedReturn}
+summary(data$EstimatedReturn)
+by_return <- group_by(data, EstimatedReturn)
+return.count <- summarise(by_return, count=n())
+return.count <- arrange(return.count, desc(count))
+return.count <- head(return.count, 10)
+
+ggplot(return.count, aes(x=EstimatedReturn, y=count)) +
+  geom_bar(stat='identity', xlim=c(0, 2), ylim=c(0, 500))
+```
+
+The plot above shows ten of the largest estimated returns within the dataset and their respective counts. From the graph, it can be easily deduced that return that have the largest number of occurrences is somewhere between 0.12 and 0.13 and very close to 0.125. Now by the summary statistics, we know that this number is above the 3rd quartile of the dataset, which is a quite surprising finding on its own. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, EmploymentStatus}
+by.job.status <- group_by(data, EmploymentStatus)
+job.status.count <- summarise(by.job.status, count=n())
+job.status.count <- arrange(job.status.count, desc(count))
+#job.status.count <- head(job.status.count, 10)
+
+ggplot(job.status.count, aes(x=EmploymentStatus, y=count)) +
+  geom_bar(stat='identity') +
+  coord_flip()
+```
+
+Now as the graph shows, the vast majority of borrowers are employed. This indeed comes as unintuitive though, because the image of an average borrower is that of a cashless person asking for money.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, OpenRevolvingAccounts}
+by_loans <- group_by(data, OpenRevolvingAccounts)
+loans.count <- summarise(by_loans, count=n())
+loans.count <- arrange(loans.count, desc(count))
+#loans.count <- head(loans.count, 10)
+
+ggplot(loans.count, aes(x=OpenRevolvingAccounts, y=count)) +
+  geom_bar(stat='identity')
+```
+
+As we can see, the peak of the distribution happens to be somewhere around 5 and the near majority of the distribution is under 10 and this is much anticipated given everyday common sense. 
+```{r echo=FALSE, message=FALSE, warning=FALSE, ProsperRating}
+by.rating <- group_by(data, ProsperRating..Alpha.)
+rating.counts <- summarise(by.rating, count=n())
+rating.counts <- arrange(rating.counts, desc(count))
+rating.counts <- filter(rating.counts, ProsperRating..Alpha. != "")
+
+ggplot(rating.counts, aes(x=ProsperRating..Alpha., y=count)) +
+  geom_bar(stat='identity')
+```
+
+It seems that there are considerably less borrowers with the lowest rating (AA), and the highest rating (HR). The vast majority of the borrowers tend to have ratings that are in the middle of the spectrum (namely, B, C, and D). 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, Inquiries}
+by.inquiries <- group_by(data, TotalInquiries)
+inquiries.counts <- summarise(by.inquiries, count=n())
+inquiries.counts <- arrange(inquiries.counts, desc(count))
+
+ggplot(inquiries.counts, aes(x=TotalInquiries, y=count)) +
+  geom_bar(stat='identity') +
+  xlim(0, 60)
+
+ggplot(inquiries.counts, aes(x=TotalInquiries, y=log2(count))) +
+  geom_bar(stat='identity') +
+  xlim(0, 60)
+```
+
+The plot above summarises the total number of inquiries made by each borrower by count. After reading the plot, it becomes clear that the vast majority of borrowers have had less than 20 inquiries. Considering that Prosper was launched in 2005 and has not grown to be very popular, it's a pretty reasonable number. Note that since the original graph turns out to be a little bit right-skewed, I log-transformed the graph and the result seems more beautiful and viewable.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, IncomeRange}
+by.income <- group_by(data, IncomeRange)
+income.counts <- summarise(by.income, count=n())
+income.counts <- arrange(income.counts, desc(count))
+income.counts <- filter(income.counts, IncomeRange != "Not displayed", IncomeRange != "Not employed")
+
+ggplot(income.counts, aes(x=IncomeRange, y=count)) +
+  geom_bar(stat='identity') +
+  coord_flip()
+```
+
+As shown by the plot, the incomes of the vast majority of the borrowers are between $25000 and $75000.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, loan_original_amount}
+by.amount <- group_by(data, LoanOriginalAmount)
+amount.counts <- summarise(by.amount, count=n())
+amount.counts <- arrange(amount.counts, desc(count))
+
+ggplot(amount.counts, aes(x=LoanOriginalAmount, y=count)) +
+  geom_point() 
+```
+
+As shown by the graph, the vast majority of the loan amount is between 0 and 10000. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+summary(data$Investors)
+by.investors <- group_by(data, Investors)
+investor.counts <- summarise(by.investors, count=n())
+investor.counts <- arrange(investor.counts, desc(count))
+investor.counts <- filter(investor.counts, Investors != 0)
+
+ggplot(investor.counts, aes(x=Investors, y=count)) +
+  geom_boxplot()
+```
+
+The majority of the number of investors for loans are below 100, with a peak value appearing just above 0, most likely below 10. 
 
 # Univariate Analysis
 
+> **Tip**: Now that you've completed your univariate explorations, it's time to
+reflect on and summarize what you've found. Use the questions below to help you
+gather your observations and add your own if you have other thoughts!
+
 ### What is the structure of your dataset?
+
+The dataset contains 113937 observations (loans) with 81 characteristics. Most borrowers are from California, professional, have an annual percentage rate of approx. 0.365, an income between $25000 and $75000, have made less than 20 inquiries in total, and have an average credit rating.
 
 ### What is/are the main feature(s) of interest in your dataset?
 
-### What other features in the dataset do you think will help support your investigation into your feature(s) of interest?
+The main features of interest in my dataset, in my opinion, are any info about the borrowers, like the state of origin, occupation, interest rate, income, etc, and its relationship with the loans themselves, like current delinquent months, the number of investors, etc.
+
+### What other features in the dataset do you think will help support your \
+investigation into your feature(s) of interest?
+
+Features like investor income, investor state, and investor credit  scores will help my investigation. 
 
 ### Did you create any new variables from existing variables in the dataset?
 
-### Of the features you investigated, were there any unusual distributions? Did you perform any operations on the data to tidy, adjust, or change the form of the data? If so, why did you do this?
+no.
 
+### Of the features you investigated, were there any unusual distributions? \
+Did you perform any operations on the data to tidy, adjust, or change the form \
+of the data? If so, why did you do this?
 
+Yes. The totalInquiries plot is a bit right-skewed, so in order to fix it, I log transformed it to make it look better.
 
 # Bivariate Plots Section
-```{r echo=FALSE, Bivariate_Plots}
 
+```{r echo=FALSE, Bivariate_Plots}
+ggplot(data, aes(x=Term, y=Investors, group=Term)) + 
+  geom_boxplot()
+```
+
+Loans with a term-length of 36 tend to have more investors and larger variation since loans of 3 years in general tend to have larger chance of generating stable returns. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=10}
+ggplot(data, aes(x=Occupation, y=EstimatedReturn)) + 
+  geom_line() +
+  coord_flip()
+```
+
+As seen on the graph, apart from the 'other' bar, the occupation with the largest estimated return is 'Professional', for example business startups. Our profession, computer programmer, has an average estimated return.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+by.state <- group_by(data, BorrowerState)
+investors <- summarize(by.state, avg_investors=mean(Investors))
+ggplot(investors, aes(x=BorrowerState, y=avg_investors)) + 
+  geom_bar(stat='identity') +
+  coord_flip()
+
+ggplot(data, aes(x=Investors, fill=BorrowerState)) + 
+  geom_bar(binwidth = 2) +
+  xlim(0, 750) +
+  ylim(0, 2000)
+```
+
+Surprisingly, Iowa has the greatest average number of investors, which begs a big question of why? In the meantime, according to the second graph, intially states labelled with blu-ish color were the majority, then they became the minority while green-ish colored states emerged victorious and became the majority. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data, aes(x=EstimatedReturn, y=LoanStatus)) + 
+  geom_line()
+```
+
+Surprisingly, there are returns of value below zero. And more surprisingly, loans with a status of 'completed' have the most fraction of below zero loans. I wonder what factors contribute to the resolvability of loans.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.width=5, fig.height=10}
+ggplot(data, aes(x=BorrowerState, y=TotalInquiries)) + 
+  geom_line() +
+  coord_flip()
+```
+
+States like California, New York, Arizona have the most number of TotalInquiries, implying an active financial market in those states. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+by.state <- group_by(data, BorrowerState)
+by.state <- filter(by.state, EstimatedReturn != "NA")
+returns <- summarize(by.state, avg_returns=mean(EstimatedReturn))
+ggplot(returns, aes(x=BorrowerState, y=avg_returns)) + 
+  geom_bar(stat='identity') +
+  coord_flip()
+
+ggplot(data, aes(x=EstimatedReturn)) + 
+  geom_bar(aes(color=BorrowerState)) +
+  coord_flip() +
+  xlim(0, 0.1) +
+  ylim(0, 500)
+```
+
+As would be expected given previous results, California has the greatest spread in estimated return, but surprisingly not the greatest average return. This time, the trophy goes to states like Alaska, Tennessee, and South Dakota, which is quite an result.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data, aes(x=LoanStatus)) +
+  geom_bar(aes(fill=BorrowerState)) +
+  coord_flip()
+```
+
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data, aes(x=LoanStatus, y=EstimatedReturn)) +
+  geom_line() +
+  coord_flip()
 ```
 
 # Bivariate Analysis
 
-### Talk about some of the relationships you observed in this part of the investigation. How did the feature(s) of interest vary with other features in the dataset?
+> **Tip**: As before, summarize what you found in your bivariate explorations
+here. Use the questions below to guide your discussion.
 
-### Did you observe any interesting relationships between the other features (not the main feature(s) of interest)?
+### Talk about some of the relationships you observed in this part of the \
+investigation. How did the feature(s) of interest vary with other features in \
+the dataset?
+
+California has the greatest spread in estimated return, and states like Alaska, Tennessee, and South Dakota have the relatively large maximum average return.
+
+States like California, New York, Arizona have the most number of TotalInquiries, implying an active financial market in those states. 
+
+Loans with a status of 'completed' have the most fraction of below zero loans.
+
+Iowa has the greatest average number of investors,
+
+### Did you observe any interesting relationships between the other features \
+(not the main feature(s) of interest)?
+
+no. 
 
 ### What was the strongest relationship you found?
 
-
-
+I didn't conduct any correlational investigations???but it seems that estimated returns and loan status have a very strong relationship. 
 
 # Multivariate Plots Section
 
 ```{r echo=FALSE, Multivariate_Plots}
+ggplot(data, aes(x=EstimatedReturn, y=Investors)) +
+  geom_line(aes(color=LoanStatus))
+
+ggplot(data, aes(x=BorrowerState, y=TotalInquiries)) +
+  geom_line(aes(color=LoanStatus)) + 
+  coord_flip()
+
+ggplot(data, aes(x=Term, y=Investors, group=Term)) +
+  geom_line(aes(color=EstimatedReturn)) + 
+  coord_flip()
+
 
 ```
 
+As shown in the graph, loan statuses with a green-ish color have a greater chance of receiving more investors and hence more spread in the variable, as would be expected from combining the variables from the last section. 
+
+California has the greatest number of TotalInquiries by borrowers, and the largest percentage of green-ish colored status. 
+
+loans with a term length of 36 months have the most number of investors and the most proportion of high 
+rate of returns
+
 # Multivariate Analysis
 
-### Talk about some of the relationships you observed in this part of the investigation. Were there features that strengthened each other in terms of looking at your feature(s) of interest?
+### Talk about some of the relationships you observed in this part of the \
+investigation. Were there features that strengthened each other in terms of \
+looking at your feature(s) of interest?
+
+For relationships, see the above. 
+There weren't any features that strengthened each other. 
 
 ### Were there any interesting or surprising interactions between features?
 
-### OPTIONAL: Did you create any models with your dataset? Discuss the strengths and limitations of your model.
+nothing that weren't expected given the previous explorations
+
+### OPTIONAL: Did you create any models with your dataset? Discuss the \
+strengths and limitations of your model.
 
 ------
 
@@ -72,27 +375,42 @@ library(ggplot2)
 
 ### Plot One
 ```{r echo=FALSE, Plot_One}
-
+ggplot(data, aes(x=BorrowerState, y=TotalInquiries)) +
+  geom_line(aes(color=LoanStatus)) + 
+  coord_flip()
 ```
 
 ### Description One
 
+The plot above shows the relationship between borrower state, Loan Status, and Total Inquiries. The interesting point about it is that it shows that California has the greatest number of Total Inquiries, and also the greatest number (read: percentage) of completed loans. This illustrates the full power of California as a state
 
 ### Plot Two
 ```{r echo=FALSE, Plot_Two}
-
+ggplot(data, aes(x=Occupation, y=EstimatedReturn)) + 
+  geom_line() +
+  coord_flip()
 ```
 
 ### Description Two
 
+The plot above shows the relationship of borrower occupation and lender estimated return. It shows the market potential for each occupation. Computer programmer only scored somewhere in the middle, while 'professional' scored the highest. 
 
 ### Plot Three
 ```{r echo=FALSE, Plot_Three}
-
+by_APR <- group_by(data, BorrowerAPR)
+APR.count <- summarise(by_APR, 
+                        count=n())
+ggplot(APR.count, aes(x=BorrowerAPR, y=count)) +
+  geom_bar(stat='identity', width=0.01) +
+  coord_cartesian(xlim=c(0, 0.5), ylim=c(0, 4000))
 ```
 
 ### Description Three
 
+The plot illustrates, on the borrowers' side, whether the loans are worth it by showing their APR. The plot shows that the vast majority of borrowers have their APR between 0.1 ~ 0.3, with a peak value appearing at arount 0.365. Thus on average, the loans have a reasonable APR. 
+
 ------
 
 # Reflection
+
+The biggest struggle that I had to go through while exploring the data was that it was very hard to interpret the data. I didn't understand what on earth each column is talking about (except some pretty obvious ones). I tried to search for answers on the Internet for those specific terms and some got its answers, and some didn't. Then I thought, Prosper is a company, implying that it might have an online API! So I turned instead to the official API of Prosper, and it answered the vast majority of the answers that I was having. The one thing that went well, however, is the coding part because I refreshed (read: promptly learned) R syntax and the package documentations. The most surprising finding, as I am an incoming junior year CS major at University of Toronto, was that computer programmer borrowers only had an expected return in the middle for lenders. That was a hugh blow to the eye... (laugh) The one insight that I can give the dataset, however, is that the parameters have to be simplified, or rather, not so technical. It took me several days to research what those vaguely explicit parameters mean. 
