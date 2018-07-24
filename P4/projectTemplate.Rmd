@@ -327,11 +327,11 @@ no.
 
 ### What was the strongest relationship you found?
 
-I didn't conduct any correlational investigations???but it seems that estimated returns and loan status have a very strong relationship. 
+I didn't conduct any correlational investigation, but it seems that estimated returns and loan status have a very strong relationship. 
 
 # Multivariate Plots Section
 
-```{r echo=FALSE, Multivariate_Plots}
+```{r echo=FALSE, warning = FALSE, message = FALSE, Multivariate_Plots}
 ggplot(data, aes(x=EstimatedReturn, y=Investors)) +
   geom_line(aes(color=LoanStatus))
 
@@ -374,7 +374,7 @@ strengths and limitations of your model.
 # Final Plots and Summary
 
 ### Plot One
-```{r echo=FALSE, Plot_One}
+```{r echo=FALSE, warning = FALSE, message = FALSE, Plot_One}
 ggplot(data, aes(x=BorrowerState, y=TotalInquiries)) +
   geom_line(aes(color=LoanStatus)) + 
   coord_flip()
@@ -385,7 +385,7 @@ ggplot(data, aes(x=BorrowerState, y=TotalInquiries)) +
 The plot above shows the relationship between borrower state, Loan Status, and Total Inquiries. The interesting point about it is that it shows that California has the greatest number of Total Inquiries, and also the greatest number (read: percentage) of completed loans. This illustrates the full power of California as a state
 
 ### Plot Two
-```{r echo=FALSE, Plot_Two}
+```{r echo=FALSE, warning = FALSE, message = FALSE, Plot_Two}
 ggplot(data, aes(x=Occupation, y=EstimatedReturn)) + 
   geom_line() +
   coord_flip()
@@ -396,12 +396,12 @@ ggplot(data, aes(x=Occupation, y=EstimatedReturn)) +
 The plot above shows the relationship of borrower occupation and lender estimated return. It shows the market potential for each occupation. Computer programmer only scored somewhere in the middle, while 'professional' scored the highest. 
 
 ### Plot Three
-```{r echo=FALSE, Plot_Three}
+```{r echo=FALSE, warning = FALSE, message = FALSE, Plot_Three}
 by_APR <- group_by(data, BorrowerAPR)
 APR.count <- summarise(by_APR, 
                         count=n())
 ggplot(APR.count, aes(x=BorrowerAPR, y=count)) +
-  geom_bar(stat='identity', width=0.01) +
+  geom_bar(stat='identity', width=0.01) + 
   coord_cartesian(xlim=c(0, 0.5), ylim=c(0, 4000))
 ```
 
@@ -413,4 +413,6 @@ The plot illustrates, on the borrowers' side, whether the loans are worth it by 
 
 # Reflection
 
-The biggest struggle that I had to go through while exploring the data was that it was very hard to interpret the data. I didn't understand what on earth each column is talking about (except some pretty obvious ones). I tried to search for answers on the Internet for those specific terms and some got its answers, and some didn't. Then I thought, Prosper is a company, implying that it might have an online API! So I turned instead to the official API of Prosper, and it answered the vast majority of the answers that I was having. The one thing that went well, however, is the coding part because I refreshed (read: promptly learned) R syntax and the package documentations. The most surprising finding, as I am an incoming junior year CS major at University of Toronto, was that computer programmer borrowers only had an expected return in the middle for lenders. That was a hugh blow to the eye... (laugh) The one insight that I can give the dataset, however, is that the parameters have to be simplified, or rather, not so technical. It took me several days to research what those vaguely explicit parameters mean. 
+The biggest struggle that I had to go through while exploring the data was that it was very hard to interpret the data. I didn't understand what on earth each column is talking about (except some pretty obvious ones). I tried to search for answers on the Internet for those specific terms and some got its answers, and some didn't. Then I thought, Prosper is a company, implying that it might have an online API! So I turned instead to the official API of Prosper, and it answered the vast majority of the answers that I was having. The one thing that went well, however, is the coding part because I refreshed (read: promptly learned) R syntax and the package documentations. The most surprising finding, as I am an incoming junior year CS major at University of Toronto, was that computer programmer borrowers only had an expected return in the middle for lenders. That was a hugh blow to the eye... (laugh)
+
+The one suggestion that I can give the dataset, however, is that the parameters have to be simplified, or rather, not so technical. It took me several days to research what those vaguely explicit parameters mean. 
