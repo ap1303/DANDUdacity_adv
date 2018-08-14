@@ -1,0 +1,22 @@
+1. The goal of this project is to try to predict, using the given features, whether a person is a POI or not. The learning process is achieved by using machine learning algorithms. The dataset contains email and financial data about every person documented and is of length 146 and among them, 18 are persons of interest and for every person, there are 23 features in total, including the ones that I created. Some features include missing values. By the way, a large number of features could be pre-emptively removed, I believe. For example, those income-related numbers. In terms of outliers, I didn't find any that's worthy of being removed in that the numerical data are all about income or payments and if the number is very large, that's because the employee did earn that amount of income or did pay that amount of money. So there is absolutely no need to remove them. But, there's a total row and it needs to be removed. And there are several rows with no usable features so they must be removed. I added two features fraction_from_poi and fraction_to_poi because the large number of email traffic itself is not strong evidence that an employee is a POI. Maybe the total number of email traffic is incredibly large and   
+the traffic between this person and poi's is only a small fraction. 
+
+At first, I tried the GaussianNB, SVM, and DecisionTree. GaussianNB has below 0.3 precision and recall, SVM reports an 'divide by zero' error, so I chose DecisionTree as the final algorithm. For the feature selection process, I manually selected the features 'salary', 'bonus', 'shared_receipt_with_poi', 'exercised_stock_options', 'loan_advances', 'total_payments', 'expenses', 'fraction_to_poi'. After achieving above 0.3 precision and recall using GridSearchCV by {'min_samples_split': 4, 'splitter': 'random', 12}, I took a look at the feature importances:
+ {'salary': 0.021234428086070213, 
+  'bonus': 0.056469577987131814, 
+  'shared_receipt_with_poi': 0.057382594755188095, 
+  'exercised_stock_options': 0.21898978275124564, 
+  'loan_advances': 0.0, 
+  'total_payments': 0.09662154051698488, 
+  'fraction_to_poi': 0.35086659292656, 
+  'expenses': 0.19843548297681932}
+and I removed all features that have an importance score less than 0.1, and found that the 
+best combination is {'min_samples_split': 18, 'splitter': 'random', 14} but this time recall was as low as 0.17. Hence I added back the features that have an importance score higher than 0.05 and found that the best combination is {'min_samples_split': 8, 'splitter': 'random', 10} and precision and recall are both above 0.3 ({'precision': 0.43679, 'recall': 0.32650}). Below I included the feature importances:  {'exercised_stock_options': 0.1219752775315334, 'fraction_to_poi': 0.3905340912879349, 'expenses': 0.05344239906144221, 'total_payments': 0.021116246000711013, 'shared_receipt_with_poi': 0.2625329765936348, 'bonus': 0.1503990095247436}
+
+In this context, precision refers to the fraction of predictions that are true, recall refers to the fraction of poi's that were identified correctly. 
+
+As for feature scaling, the model here doesn't require feature scaling because it doesn't involve Euclidean space and any advanced mathematics
+
+To tune the parameters of an algorithm means to pick the parameter combination in the given set of combinations that has the best performance. If this step is not done well, the best effort is not achieved. 
+
+Validation means to validate the model on unseen data to verify that it works. If this step is not done well, the model wouldn't work on any unseen data and thus can't be generalized
