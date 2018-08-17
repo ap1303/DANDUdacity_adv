@@ -8,4 +8,4 @@ The major design choices that I made during the writing of the project are the t
 Some people may lament the lack of diversity of the type of plots used, but I explicitly chose barplots to illustrate my narratives for no other reason than the fact that the information is more centrally displayed and the focus on the narrative is underlined. In so doing, the flow of logic is flatter, making the narrative more appealing. 
 
 # FeedBack
-
+(1). I love your idea and the narrative. However, can you make it a little more aesthetically pleasing? The current version has few lines of words explaning the narrative, and the colors used are simple and bland as it only contains one type of color.

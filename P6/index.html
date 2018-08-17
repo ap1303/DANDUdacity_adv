@@ -6,16 +6,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <style>
 
-      rect {
+      .frequency rect {
          fill: steelblue;
       }
-
-      text {
-         fill: white;
-         font: 10px sans-serif;
-         text-anchor: middle;
+ 
+      .average rect {
+         fill: black;
       }
 
+      .HR rect {
+         fill: red;
+      }
     </style>
   </head>
 
@@ -120,6 +121,7 @@ or feel superior, making them want to keep the status quo and making more effort
                    	 tip.html("Handedness: " + d.key + "</br>" + "home runs: " + d.values);
                    }
                    tip.show();
+                   d3.select(this).transition().delay().duration(200).style("color", "red");
                  })
              .on("mouseout", function (d) {
             	   tip.hide();
