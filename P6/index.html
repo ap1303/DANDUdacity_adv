@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Visualization of the Baseball Data </title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <style>
+
+      rect {
+         fill: steelblue;
+      }
+
+      text {
+         fill: white;
+         font: 10px sans-serif;
+         text-anchor: middle;
+      }
+
+    </style>
+  </head>
+
+  <body>
+  	
+
+    <h1> Are left-handed people better at baseball than right-handed people? </h1>
+    <p> left-handed people are often thought to be smarter than right-handed people because of difference of brain hemispherical functions. But does the myth apply to baseball games? Let's find out! (P.S. I myself am a leftie, so this research gives  me the most pride) </p>
+    <p> First, let's see the distribution of handedness in our dataset </p>
+
+    <svg class="frequency">
+    </svg>
+
+    <p> It seems that right-handed people make up for the majority of candidates. But what about performance?
+    </p>
+
+    <svg class="average">
+    </svg>
+
+    <p> Surprisingly, left-handed people outperform right-handed people by a slight margin in terms of batting average. And what about the average number of home runs? </p>
+
+    <svg class="HR">
+    </svg> 
+
+    <p> More surprisingly, left-handed people still outperform right-handed people but by a large difference this time in terms of the average  
+    	number of home runs scored. </p>
+
+    <p> The conclusion, though possibly not very accurate, is that left-handed people are somewhat more gifted than right-handed people at baseball games. On second thought, aside from anatomical reasons, motivation might be another core factor that is influcing the outcome because lefties either feel inferior, 
+    forcing them to throw more effort to succeed, 
+or feel superior, making them want to keep the status quo and making more effort to stand out. </p>
+
+    <script>
+       function draw_bar_graph(data, type){
+       	    var tip = d3.tip()
+                        .attr('class', 'd3-tip')
+                        .offset([-10, 0])
+                
+       	    var width = 960;
+            var height;
+            var barHeight = 30;
+            var barwidth;
+       	    var h_count = null;
+       	    var graph = null;
+       	    var x = d3.scale.ordinal().domain(["R", "L", "B"]).rangeBands([0, width])
+       	    var y;
+       	 if (type == 'distribution') {
+       	 	height = 500;
+       	 	h_count = d3.nest().key(function (d) {return d.handedness;}).rollup(function (v) {return {"count": v.length};}).entries(data);
+       	 	graph = d3.select(".frequency");
+            y = d3.scale.linear().domain([800, 0]).range([0, height]);
+            barwidth = width / h_count.length;
+       	 } else if (type == 'average') {
+       	 	height = 100;
+            h_count = d3.nest().key(function (d) {return d.handedness;}).rollup(function (v) {return {"average": d3.mean(v, function (d) {return d.avg;})}}).entries(data);
+            graph = d3.select(".average");
+            y = d3.scale.linear().domain([0, .5]).range([height, 0]);
+            barwidth = width / h_count.length;
+       	 } else if (type == 'HR') {
+       	 	height = 200;
+            h_count = d3.nest().key(function (d) {return d.handedness;}).rollup(function (v) {return d3.mean(v, function (d) {return d.HR;})}).entries(data);
+            console.log(h_count);
+            graph = d3.select(".HR");
+            y = d3.scale.linear().domain([0, 100]).range([height, 0]);
+            barwidth = width / h_count.length;
+       	 } else {
+       	 	console.log("default");
+       	 }
+         graph.attr("width", width)
+              .attr("height", height);
+         var bars = graph.selectAll(".bar").data(h_count).enter().append("rect")
+             .attr("class", "bar")
+             .attr("x", function (d) {
+                   return x(d.key);
+             })
+             .attr("y", function (d) {
+                	if (type == "distribution") {
+                		return y(d.values.count);
+                	} else if (type == "average"){
+                		return y(d.values.average);
+                	} else {
+                		return y(d.values)
+                	}
+                    
+             })
+             .attr("width", barwidth)
+             .attr("height", function (d) {
+                	if (type == "distribution") {
+                		return height - y(d.values.count);
+                	} else if (type == "average"){
+                		return height - y(d.values.average);
+                	} else {
+                		return height - y(d.values);
+                	}}
+             )
+             .on("mouseover", function (d) {
+             	   graph.call(tip)
+                   if(type == "distribution") {
+                   	 tip.html("Handedness: " + d.key + "</br>" + "Count: " + d.values.count);
+                   } else if(type == "average"){
+                     tip.html("Handedness: " + d.key + "</br>" + "average: " + d.values.average);
+                   } else {
+                   	 tip.html("Handedness: " + d.key + "</br>" + "home runs: " + d.values);
+                   }
+                   tip.show();
+                 })
+             .on("mouseout", function (d) {
+            	   tip.hide();
+                 });
+      }
+
+       d3.csv("baseball_data.csv", function (d) {
+           return {
+           	 "name": d.name,
+           	 "handedness": d.handedness,
+           	 "height": +d.height,
+           	 "weight": +d.weight,
+           	 "avg": +d.avg,
+           	 "HR": +d.HR
+           };
+       }, function (data) {
+              draw_bar_graph(data, type='distribution');
+              draw_bar_graph(data, type='average');
+              draw_bar_graph(data, type='HR')
+           }
+       );
+       
+    </script>
+    
+  </body>
+</html>

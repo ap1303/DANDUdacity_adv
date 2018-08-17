@@ -63,7 +63,7 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
         accuracy = 1.0*(true_positives + true_negatives)/total_predictions
         precision = 1.0*true_positives/(true_positives+false_positives)
         recall = 1.0*true_positives/(true_positives+false_negatives)
-        f1 = 2.0 * true_positives/(2*true_positives + false_positives+false_negatives)
+        f1 = 2.0 * true_positives/(2*true_positives + false_positives + false_negatives)
         f2 = (1+2.0*2.0) * precision*recall/(4*precision + recall)
         print(clf)
         print(PERF_FORMAT_STRING.format(accuracy, precision, recall, f1, f2, display_precision = 5))
@@ -103,6 +103,7 @@ def main():
     clf, dataset, feature_list = load_classifier_and_data()
     ### Run testing script
     test_classifier(clf, dataset, feature_list)
+
 
 if __name__ == '__main__':
     main()
