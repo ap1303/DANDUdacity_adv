@@ -5,13 +5,12 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <style>
-
       .frequency rect {
          fill: steelblue;
       }
  
       .average rect {
-         fill: black;
+         fill: yellow;
       }
 
       .HR rect {
@@ -54,38 +53,44 @@ or feel superior, making them want to keep the status quo and making more effort
                         .attr('class', 'd3-tip')
                         .offset([-10, 0])
                 
-       	    var width = 960;
-            var height;
+       	    var margin = {top: 20, right: 30, bottom: 30, left: 40},
+            width = 960 - margin.left - margin.right,
+            height;
             var barHeight = 30;
             var barwidth;
        	    var h_count = null;
        	    var graph = null;
-       	    var x = d3.scale.ordinal().domain(["R", "L", "B"]).rangeBands([0, width])
+       	    var x = d3.scale.ordinal().domain(["R", "L", "B"]).rangeBands([0, width]);
+       	    var xAxis = d3.svg.axis().scale(x).orient("bottom");
        	    var y;
+       	    var title;
        	 if (type == 'distribution') {
-       	 	height = 500;
+       	 	height = 500 - - margin.top - margin.bottom;
        	 	h_count = d3.nest().key(function (d) {return d.handedness;}).rollup(function (v) {return {"count": v.length};}).entries(data);
        	 	graph = d3.select(".frequency");
             y = d3.scale.linear().domain([800, 0]).range([0, height]);
             barwidth = width / h_count.length;
+            title = "Distribution of Handedness"
        	 } else if (type == 'average') {
-       	 	height = 100;
+       	 	height = 500 - margin.top - margin.bottom;;
             h_count = d3.nest().key(function (d) {return d.handedness;}).rollup(function (v) {return {"average": d3.mean(v, function (d) {return d.avg;})}}).entries(data);
             graph = d3.select(".average");
             y = d3.scale.linear().domain([0, .5]).range([height, 0]);
             barwidth = width / h_count.length;
+            title = "Handedness V.S. Batting Average"
        	 } else if (type == 'HR') {
-       	 	height = 200;
+       	 	height = 300 - - margin.top - margin.bottom;
             h_count = d3.nest().key(function (d) {return d.handedness;}).rollup(function (v) {return d3.mean(v, function (d) {return d.HR;})}).entries(data);
             console.log(h_count);
             graph = d3.select(".HR");
             y = d3.scale.linear().domain([0, 100]).range([height, 0]);
             barwidth = width / h_count.length;
+            title = "Handedness V.S. Home Runs"
        	 } else {
        	 	console.log("default");
        	 }
-         graph.attr("width", width)
-              .attr("height", height);
+         graph.attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom);
          var bars = graph.selectAll(".bar").data(h_count).enter().append("rect")
              .attr("class", "bar")
              .attr("x", function (d) {
@@ -121,11 +126,26 @@ or feel superior, making them want to keep the status quo and making more effort
                    	 tip.html("Handedness: " + d.key + "</br>" + "home runs: " + d.values);
                    }
                    tip.show();
-                   d3.select(this).transition().delay().duration(200).style("color", "red");
                  })
              .on("mouseout", function (d) {
             	   tip.hide();
                  });
+         graph.append("text")
+              .attr("x", (width / 2))
+              .attr("y", margin.top)
+              .attr("text-anchor", "middle")
+              .text(title);
+
+         graph.append("g")
+              .attr("class", "xAxis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+
+         var yAxis = d3.svg.axis().scale(y).orient("right");
+         graph.append("g")
+              .attr("class", "yAxis")
+              .call(yAxis);
+
       }
 
        d3.csv("baseball_data.csv", function (d) {
